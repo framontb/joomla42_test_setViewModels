@@ -34,7 +34,7 @@ class FoosModel extends BaseDatabaseModel
 	public function getMsg()
 	{
 		if (!isset($this->message)) {
-			$this->message = 'Hello Foo from the model: DEFAULT';
+			$this->message = 'Hello FOOS from the ADMINISTRATOR model: DEFAULT';
 		}
 
 		return $this->message;
