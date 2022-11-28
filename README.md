@@ -1,5 +1,5 @@
 
-# COMPONENTE COM_FOOS
+# COMPONENT COM_FOOS
 
 Component com_foos for testing new funcionality in Joomla 4.2: 
 

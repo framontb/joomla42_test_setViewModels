@@ -21,22 +21,22 @@ use Joomla\CMS\MVC\Model\BaseDatabaseModel;
  */
 class ThirdModel extends BaseDatabaseModel
 {
-	/**
-	 * @var string message
-	 */
-	protected $message;
+    /**
+     * @var string message
+     */
+    protected $message;
 
-	/**
-	 * Get the message
-	 *
-	 * @return  string  The message to be displayed to the user
-	 */
-	public function getMsg()
-	{
-		if (!isset($this->message)) {
-			$this->message = 'Hello FOOS from the ADMINISTRATOR model: THIRD';
-		}
+    /**
+     * Get the message
+     *
+     * @return  string  The message to be displayed to the user
+     */
+    public function getMsg()
+    {
+        if (!isset($this->message)) {
+            $this->message = 'Hello FOOS from the ADMINISTRATOR model: THIRD';
+        }
 
-		return $this->message;
-	}
+        return $this->message;
+    }
 }

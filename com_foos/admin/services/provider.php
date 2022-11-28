@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @package     Joomla.Administrator
  * @subpackage  com_foos
@@ -27,30 +28,30 @@ use FooNamespace\Component\Foos\Administrator\Extension\FoosComponent;
  */
 return new class implements ServiceProviderInterface
 {
-	/**
-	 * Registers the service provider with a DI container.
-	 *
-	 * @param   Container  $container  The DI container.
-	 *
-	 * @return  void
-	 *
-	 * @since   1.0.0
-	 */
-	public function register(Container $container)
-	{
-		$container->registerServiceProvider(new CategoryFactory('\\FooNamespace\\Component\\Foos'));
-		$container->registerServiceProvider(new MVCFactory('\\FooNamespace\\Component\\Foos'));
-		$container->registerServiceProvider(new ComponentDispatcherFactory('\\FooNamespace\\Component\\Foos'));
+    /**
+     * Registers the service provider with a DI container.
+     *
+     * @param   Container  $container  The DI container.
+     *
+     * @return  void
+     *
+     * @since   1.0.0
+     */
+    public function register(Container $container)
+    {
+        $container->registerServiceProvider(new CategoryFactory('\\FooNamespace\\Component\\Foos'));
+        $container->registerServiceProvider(new MVCFactory('\\FooNamespace\\Component\\Foos'));
+        $container->registerServiceProvider(new ComponentDispatcherFactory('\\FooNamespace\\Component\\Foos'));
 
-		$container->set(
-			ComponentInterface::class,
-			function (Container $container) {
-				$component = new FoosComponent($container->get(ComponentDispatcherFactoryInterface::class));
+        $container->set(
+            ComponentInterface::class,
+            function (Container $container) {
+                $component = new FoosComponent($container->get(ComponentDispatcherFactoryInterface::class));
 
-				$component->setRegistry($container->get(Registry::class));
+                $component->setRegistry($container->get(Registry::class));
 
-				return $component;
-			}
-		);
-	}
+                return $component;
+            }
+        );
+    }
 };

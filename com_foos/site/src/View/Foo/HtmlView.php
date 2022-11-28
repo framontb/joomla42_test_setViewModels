@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @package     Joomla.Site
  * @subpackage  com_foos
@@ -8,7 +9,6 @@
  */
 
 namespace FooNamespace\Component\Foos\Site\View\Foo;
-//namespace Joomla\Component\Foos\Site\View\Foo;
 
 \defined('_JEXEC') or die;
 
@@ -21,18 +21,18 @@ use Joomla\CMS\MVC\View\HtmlView as BaseHtmlView;
  */
 class HtmlView extends BaseHtmlView
 {
-	/**
-	 * Execute and display a template script.
-	 *
-	 * @param   string  $tpl  The name of the template file to parse; automatically searches through the template paths.
-	 *
-	 * @return  mixed  A string if successful, otherwise an Error object.
-	 */
-	public function display($tpl = null)
-	{
+    /**
+     * Execute and display a template script.
+     *
+     * @param   string  $tpl  The name of the template file to parse; automatically searches through the template paths.
+     *
+     * @return  mixed  A string if successful, otherwise an Error object.
+     */
+    public function display($tpl = null)
+    {
         $this->msg  = $this->get('Msg');
         $this->msg2 = $this->get('Msg', 'SecondSite');
         $this->msg3 = $this->get('Msg', 'Third');
-		return parent::display($tpl);
-	}
+        return parent::display($tpl);
+    }
 }

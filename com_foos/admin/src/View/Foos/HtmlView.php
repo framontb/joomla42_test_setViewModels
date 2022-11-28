@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @package     Joomla.Administrator
  * @subpackage  com_foos
@@ -20,21 +21,21 @@ use Joomla\CMS\MVC\View\HtmlView as BaseHtmlView;
  */
 class HtmlView extends BaseHtmlView
 {
-	/**
-	 * Method to display the view.
-	 *
-	 * @param   string  $tpl  A template file to load. [optional]
-	 *
-	 * @return  void
-	 *
-	 * @since   1.0.0
-	 */
-	public function display($tpl = null)
-	{
+    /**
+     * Method to display the view.
+     *
+     * @param   string  $tpl  A template file to load. [optional]
+     *
+     * @return  void
+     *
+     * @since   1.0.0
+     */
+    public function display($tpl = null)
+    {
         $this->msg  = $this->get('Msg');
         $this->msg2 = $this->get('Msg', 'Second');
         $this->msg3 = $this->get('Msg', 'Third');
-        
-		return parent::display($tpl);
-	}
+
+        return parent::display($tpl);
+    }
 }

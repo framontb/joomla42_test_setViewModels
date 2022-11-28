@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @package     Joomla.Administrator
  * @subpackage  com_foos
@@ -26,24 +27,24 @@ use Psr\Container\ContainerInterface;
  */
 class FoosComponent extends MVCComponent implements BootableExtensionInterface, CategoryServiceInterface
 {
-	use CategoryServiceTrait;
-	use HTMLRegistryAwareTrait;
+    use CategoryServiceTrait;
+    use HTMLRegistryAwareTrait;
 
-	/**
-	 * Booting the extension. This is the function to set up the environment of the extension like
-	 * registering new class loaders, etc.
-	 *
-	 * If required, some initial set up can be done from services of the container, eg.
-	 * registering HTML services.
-	 *
-	 * @param   ContainerInterface  $container  The container
-	 *
-	 * @return  void
-	 *
-	 * @since   1.0.0
-	 */
-	public function boot(ContainerInterface $container)
-	{
-		$this->getRegistry()->register('foosadministrator', new AdministratorService);
-	}
+    /**
+     * Booting the extension. This is the function to set up the environment of the extension like
+     * registering new class loaders, etc.
+     *
+     * If required, some initial set up can be done from services of the container, eg.
+     * registering HTML services.
+     *
+     * @param   ContainerInterface  $container  The container
+     *
+     * @return  void
+     *
+     * @since   1.0.0
+     */
+    public function boot(ContainerInterface $container)
+    {
+        $this->getRegistry()->register('foosadministrator', new AdministratorService());
+    }
 }
