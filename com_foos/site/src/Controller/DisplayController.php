@@ -66,9 +66,9 @@ class DisplayController extends BaseController
      * @return  void
      *
      */
-    public function setViewModels(object $view)
+    protected function prepareViewModel($view)
     {
-        parent::setViewModels($view);
+        parent::prepareViewModel($view);
 
         $viewName = $view->getName();
 
