@@ -1,7 +1,7 @@
 
 # COMPONENT COM_FOOS
 
-Component com_foos for testing new funcionality in Joomla 4.2: 
+Component com_foos for testing new funcionality in Joomla 4.3: 
 
 * Multiple Models attached to a View.
 
